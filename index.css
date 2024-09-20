@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+}
+
+.vid-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+.action-container {
+  height: 12rem;
+  width: 5rem;
+  position: absolute;
+  top: calc((100vh - 12rem) / 2);
+  right: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.action-container > * {
+  width: 100%;
+  height: 5rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.record-btn {
+  height: 3rem;
+  width: 3rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.capture-btn {
+  height: 3rem;
+  width: 3rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.scale-record {
+  animation-name: scale-record;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.scale-capture {
+  animation-name: scale-record;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scale-record {
+  0% {
+    scale: 0.8;
+  }
+  100% {
+    scale: 1.1;
+  }
+}
+
+@keyframes scale-capture {
+  0% {
+    scale: 0.8;
+  }
+  100% {
+    scale: 1.1;
+  }
+}
