@@ -3,14 +3,14 @@
 }
 
 body {
-  padding: 0px;
-  margin: 0px;
-  background-color: black;
+  padding: 0;
+  margin: 0;
 }
 
 .vid-container {
   height: 100vh;
   width: 100vw;
+  background-color: black;
 }
 
 video {
@@ -24,10 +24,11 @@ video {
   position: absolute;
   top: calc((100vh - 12rem) / 2);
   right: 5rem;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: white;
+  z-index: 2;
 }
 
 .action-container > * {
@@ -36,7 +37,6 @@ video {
   border-radius: 50%;
   border: 5px solid white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -62,7 +62,7 @@ video {
 }
 
 .scale-capture {
-  animation-name: scale-record;
+  animation-name: scale-capture;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
@@ -83,4 +83,59 @@ video {
   100% {
     scale: 1.1;
   }
+}
+
+.timer-container {
+  height: 16rem;
+  width: 6rem;
+  color: aqua;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 13rem;
+  right: 4.5rem;
+}
+.timer {
+  display: none;
+}
+
+.filter-container {
+  height: 16rem;
+  width: 5rem;
+  position: absolute;
+  bottom: 8rem;
+  left: 5rem;
+  z-index: 2;
+}
+
+.filter {
+  background-image: url("https://picsum.photos/seed/picsum/200/300");
+  height: 4rem;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: color-burn;
+}
+
+.filter-layer {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.blue {
+  background-color: #8a7cdb9e;
+}
+
+.pink {
+  background-color: #dd80b6ab;
+}
+
+.yellow {
+  background-color: #e5e9b7bd;
+}
+.transparent {
+  background-color: transparent;
 }
